@@ -5,6 +5,7 @@ import HEADER2 from './Header2';
 import HEADER3 from './Header3';
 import CLICKCOUNTER from './components/ClickCounter';
 import HOVERCOUNTER from './components/HoverCounter';
+import MODEL from './components/Model';
 function App() {
   return (
     <div className="App">
@@ -14,6 +15,8 @@ function App() {
 ###########################################
       <CLICKCOUNTER />
       <HOVERCOUNTER />
+      ###########################################
+      <MODEL />
 
     </div>
   );
