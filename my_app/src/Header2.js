@@ -7,20 +7,24 @@ class HEADER2 extends Component {
     console.log("constructor 2");
   }
 
+  shouldComponentUpdate() {
+    return true;
+  }
+
   static getDerivedStateFromProps(props, state) {
     console.log("getDerivedStateFromProps 2");
     return {favoritecolor: props.favcol };
   }
 
-  componentDidMount() {
-    console.log("componentDidMount 2");
-    setTimeout(() => {
-      this.setState({favoritecolor: "blue"})
-    }, 1000)
+  changeColor = () => {
+    this.setState({favoritecolor: "blue"});
   }
   render() {
     return (
+      <div>
       <h1>My Favorite Color is {this.state.favoritecolor}</h1>
+      <button type="button" onClick={this.changeColor}>Change color</button>
+      </div>
     );
   }
 }
